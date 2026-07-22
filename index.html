@@ -268,7 +268,34 @@
 <!--论文-->
 
 
+    <tr onmouseout="bog_stop()" onmouseover="bog_start()">
+      <td style="padding:20px;width:30%;vertical-align:middle">
+        <div class="one">
+          <div class="two" id='m2sim' style="opacity: 0;"></div>
+          <img src='images/prism.gif' width=180%>
+        </div>
+      </td>
+      <td style="padding:35px;width:75%;vertical-align:middle">
+        <span class="papertitle">PRISM: PRior-guided Imagination Sampling in world Models</span>
+        <br>
+        <a href="https://yuhaiw.github.io/">Yuhai Wang</a>,
+        <strong><a href="https://harroldx.github.io/">Jiawei Xia</a></strong>,
+        Rongxuan Zhou,
+        Hu Xiao,
+        <a href="https://scholar.google.com.hk/citations?user=alz2MpAAAAAJ&hl">Yongliang Shi</a>,
+        Du Jing,
+        <a href="https://gilbert-yangye.github.io/">Yang Ye</a>
+        <br>
+        <strong><em>Under Review</em></strong>
+        <br>
+        <a href="https://arxiv.org/html/2606.07974v1"><b>[Paper]</b></a>
+        <a href="https://yuhaiw.github.io/PRISM_web/"><b>[Website]</b></a>
+        <p>
+          While world models evaluate future states well, effective continuous control relies on generating good candidate actions. Existing planners either search arbitrarily or require bloated architectures (e.g., VLMs) for action priors. We introduce PRISM, a simple, task-agnostic framework. Attached to a frozen JEPA encoder, a lightweight MLP predicts a Gaussian action prior. At plan time, a closed-form Product-of-Gaussians update integrates this prior to guide sampling based on confidence.
+    </tr>
 
+
+				
 
     <tr onmouseout="bog_stop()" onmouseover="bog_start()">
       <td style="padding:20px;width:30%;vertical-align:middle">
@@ -297,31 +324,7 @@
     </tr>
 
 
-    <tr onmouseout="bog_stop()" onmouseover="bog_start()">
-      <td style="padding:20px;width:30%;vertical-align:middle">
-        <div class="one">
-          <div class="two" id='m2sim' style="opacity: 0;"></div>
-          <img src='images/prism.gif' width=180%>
-        </div>
-      </td>
-      <td style="padding:35px;width:75%;vertical-align:middle">
-        <span class="papertitle">PRISM: PRior-guided Imagination Sampling in world Models</span>
-        <br>
-        <a href="https://yuhaiw.github.io/">Yuhai Wang</a>,
-        <strong><a href="https://harroldx.github.io/">Jiawei Xia</a></strong>,
-        Rongxuan Zhou,
-        Hu Xiao,
-        <a href="https://scholar.google.com.hk/citations?user=alz2MpAAAAAJ&hl">Yongliang Shi</a>,
-        Du Jing,
-        <a href="https://gilbert-yangye.github.io/">Yang Ye</a>
-        <br>
-        <strong><em>Under Review</em></strong>
-        <br>
-        <a href="https://arxiv.org/html/2606.07974v1"><b>[Paper]</b></a>
-        <a href="https://yuhaiw.github.io/PRISM_web/"><b>[Website]</b></a>
-        <p>
-          While world models evaluate future states well, effective continuous control relies on generating good candidate actions. Existing planners either search arbitrarily or require bloated architectures (e.g., VLMs) for action priors. We introduce PRISM, a simple, task-agnostic framework. Attached to a frozen JEPA encoder, a lightweight MLP predicts a Gaussian action prior. At plan time, a closed-form Product-of-Gaussians update integrates this prior to guide sampling based on confidence.
-    </tr>
+
 
 
 				
