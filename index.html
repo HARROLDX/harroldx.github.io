@@ -37,7 +37,7 @@
                 </td>
                 <td style="padding:20px;width:70%;vertical-align:top;text-align:justify">
                   <p class="name">Jiawei Xia 「夏佳炜」</p>
-                  <p>I am a master's student at <strong>the University of California, Berkeley</strong>. My research interests focus on <strong>Robotics</strong>.</p>
+                  <p>I am a master's student at <strong>the University of California, Berkeley</strong>.My research interests focus on Robotics. Currently, I am a research assistant at <a href="https://bair.berkeley.edu/about"><strong>BAIR</strong></a>, advised by Prof. Koushil Sreenath and Prof. Masayoshi Tomizuka.</p>
                   <p>Previously, I worked as a research intern at <strong><a href="https://air.tsinghua.edu.cn/">Institute for AI Industry Research, Tsinghua University</a></strong> and an Embodied AI Algorithm Intern at <strong><a href="https://www.jdt.com.cn/innovation/">JD Explore Academy</a></strong>. And I enjoyed my time there.</p>
                   <p>Before that, I received my B.S. in Beijing University of Chemical Technology.</p>
                   <p>In my spare time, I enjoy photography, hiking, formula 1, and basketball.</p>
@@ -93,7 +93,7 @@
 <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
   <tbody>
     <tr>
-      <td style="padding:20px;width:100%;vertical-align:middle">
+      <td class="education-heading-cell" style="padding:20px;width:100%;vertical-align:middle">
         <h2>Education</h2>
       </td>
     </tr>
@@ -189,6 +189,25 @@
                 <td style="padding:20px;width:30%;vertical-align:middle">
                   <div class="one">
                     <div class="two" style="opacity: 0;"></div>
+                    <img src="images/BAIR_Logo.png" alt="Berkeley Artificial Intelligence Research Lab logo">
+                  </div>
+                </td>
+                <td style="padding:35px;width:80%;vertical-align:middle">
+                  <span class="papertitle">Berkeley Artificial Intelligence Research (BAIR) Lab</span>
+                  <br>
+                  Research Assistant &nbsp;|&nbsp; Sep 2026 – Present
+                  <br>
+                  Faculty Advisors: Prof. <a href="https://me.berkeley.edu/people/koushil-sreenath/">Koushil Sreenath</a> and Prof. <a href="https://me.berkeley.edu/people/masayoshi-tomizuka/">Masayoshi Tomizuka</a>
+                  <br>
+                  Direct Mentors: Dr.<a href="https://warshallrho.github.io/">Ruihai Wu</a> and PHDing.<a href="https://t6-thu.github.io/">Haoyi Niu</a>
+                  <p>Researching robotic dexterous manipulation skill learning and policy post training.</p>
+                </td>
+              </tr>
+
+              <tr>
+                <td style="padding:20px;width:30%;vertical-align:middle">
+                  <div class="one">
+                    <div class="two" style="opacity: 0;"></div>
                     <img src='images/jd.png' style="width:142%; margin-left: 30px;margin-top: -46px;">
                   </div>
                 </td>
@@ -216,7 +235,7 @@
                   Research Intern &nbsp;|&nbsp; Dec 2024 – Feb 2026
                   <br>
                   Advisors: Dr. <a href="https://scholar.google.com.hk/citations?user=alz2MpAAAAAJ&amp;hl">Yongliang Shi</a> and Dr. <a href="https://scholar.google.com/citations?user=0JWBqJ4AAAAJ&amp;hl=zh-CN">Weining Lu</a>
-                  <p>Developed robust LiDAR-inertial-thermal SLAM and explored tactile and thermal sensing for robot imitation learning.</p>
+                  <p>Developed Robust LiDAR-inertial-thermal SLAM and explored tactile and thermal sensing for robot imitation learning.</p>
                 </td>
               </tr>
 
@@ -325,7 +344,7 @@
         <a href="https://arxiv.org/abs/2606.29259"><b>[Paper]</b></a>
         <a href="https://youtu.be/JuBfl2GoKwU"><b>[Video]</b></a>
         <p>
-          We propose PL-LIT, a general LiDAR-Inertial-Thermal SLAM system compatible with both visible and thermal cameras. Built on an ESIKF framework, it integrates online photometric calibration with deep point-line feature extraction and robust line constraints.
+          We propose PL-LIT, a general LiDAR-Inertial-Thermal SLAM system. PL-LIT combines an online photometric calibration module with a deep neural network for point-line feature extraction. For state estimation, we design a tightly coupled LiDAR-Inertial-Thermal formulation within an Error-State Iterated Kalman Filter. In addition, PL-LIT builds a probabilistic thermal-intensity voxel map
     </tr>
 
 
@@ -784,7 +803,7 @@ Designed the hydraulic circuit by selecting key components including DSG-01 and 
             document.addEventListener('DOMContentLoaded', function () {
               setupShowMore('#newsList', 'li', 'expandNews', 4);
               setupShowMore('#educationList', 'tr', 'expandEducation', 1);
-              setupShowMore('#internshipList', 'tr', 'expandInternship', 2);
+              setupShowMore('#internshipList', 'tr', 'expandInternship', 3);
               setupShowMore('#publicationsList', 'tr', 'expandPublications', 4);
               setupShowMore('#projectsList', 'tr', 'expandProjects', 4);
               setupShowMore('#awardsList', 'li', 'expandAwards', 4);

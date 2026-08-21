@@ -31,6 +31,14 @@ strong { font-weight: 600; }
 h2 { margin: 0; font-size: 22px; font-weight: 600; }
 p { margin: 0 0 13px; }
 
+.education-heading-cell {
+  padding-bottom: 8px !important;
+}
+
+#educationList tr:first-child td {
+  padding-top: 8px !important;
+}
+
 .name {
   margin: 0 0 18px;
   padding: 0;
@@ -103,7 +111,12 @@ hr {
   vertical-align: middle !important;
 }
 
-#internshipList tr:first-child .one {
+#internshipList tr:first-child img {
+  width: 62% !important;
+  max-width: 200px;
+}
+
+#internshipList tr:nth-child(2) .one {
   display: flex;
   height: 150px;
   align-items: center;
@@ -111,7 +124,7 @@ hr {
   overflow: hidden;
 }
 
-#internshipList tr:first-child img {
+#internshipList tr:nth-child(2) img {
   flex: 0 0 auto;
   width: 74% !important;
   max-width: none;
@@ -119,7 +132,7 @@ hr {
   margin: 0 !important;
 }
 
-#internshipList tr:nth-child(3) img {
+#internshipList tr:nth-child(4) img {
   width: 72% !important;
   max-width: 235px;
 }
@@ -163,11 +176,34 @@ hr {
   body, td, th, tr, p, a, strong { font-size: 15px; }
   .name { margin-top: 8px; font-size: 34px; text-align: center !important; }
 
+  .education-heading-cell { padding-bottom: 4px !important; }
+
+  #educationList, #educationList > tbody,
+  #internshipList, #internshipList > tbody,
+  #publicationsList, #publicationsList > tbody,
+  #projectsList, #projectsList > tbody {
+    display: block;
+    width: 100% !important;
+  }
+
   .profile-row, .profile-row > td,
   #educationList tr, #educationList td,
   #internshipList tr, #internshipList td,
   #publicationsList tr, #publicationsList td,
   #projectsList tr, #projectsList td { display: block; width: 100% !important; }
+
+  #educationList td,
+  #internshipList td,
+  #publicationsList td,
+  #projectsList td {
+    min-width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  #educationList tr.hidden,
+  #internshipList tr.hidden,
+  #publicationsList tr.hidden,
+  #projectsList tr.hidden { display: none; }
 
   .profile-row > td { padding: 12px 20px !important; }
   .profile-row > td:last-child { text-align: left !important; }
@@ -181,9 +217,10 @@ hr {
 
   #educationList img, #internshipList img,
   #publicationsList img, #projectsList img { width: min(100%, 360px) !important; max-height: 230px; }
-  #internshipList tr:first-child .one { height: 145px; }
-  #internshipList tr:first-child img { width: 74% !important; margin: 0 !important; }
-  #internshipList tr:nth-child(3) img { width: 72% !important; }
+  #internshipList tr:first-child img { width: 62% !important; }
+  #internshipList tr:nth-child(2) .one { height: 145px; }
+  #internshipList tr:nth-child(2) img { width: 74% !important; margin: 0 !important; }
+  #internshipList tr:nth-child(4) img { width: 72% !important; }
   hr { margin-top: 4px; }
 }
 
