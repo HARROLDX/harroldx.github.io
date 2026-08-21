@@ -1,10 +1,11 @@
-/* Visual language adapted from Tairan He's academic homepage. */
+/* A restrained Apple/Google-inspired refinement of the academic layout. */
 :root {
-  --link: #1772d0;
-  --link-hover: #f09228;
-  --text: #202124;
-  --muted: #5f6368;
-  --rule: rgba(0, 0, 0, 0.18);
+  --link: #0672ce;
+  --link-hover: #004f91;
+  --text: #1d1d1f;
+  --muted: #6e6e73;
+  --rule: #e5e5e7;
+  --surface: #f7f7f8;
 }
 
 * { box-sizing: border-box; }
@@ -14,29 +15,34 @@ body {
   margin: 0;
   color: var(--text);
   background: #fff;
-  font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-weight: 400;
-  line-height: 1.42;
+  line-height: 1.5;
+  letter-spacing: -0.006em;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 body, td, th, tr, p, a, strong {
-  font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   font-size: 16px;
 }
 
-a { color: var(--link); text-decoration: none; transition: color 150ms ease; }
+a { color: var(--link); text-decoration: none; transition: color 150ms ease, opacity 150ms ease; }
 a:focus, a:hover { color: var(--link-hover); }
+a:focus-visible { outline: 2px solid rgba(6, 114, 206, 0.35); outline-offset: 3px; border-radius: 3px; }
 strong { font-weight: 600; }
-h2 { margin: 0; font-size: 22px; font-weight: 600; }
+h2 { margin: 0; font-size: 23px; font-weight: 600; letter-spacing: -0.022em; }
 p { margin: 0 0 13px; }
 
 .name {
   margin: 0 0 18px;
   padding: 0;
-  font-size: 38px;
-  font-weight: 400;
-  line-height: 1.15;
+  font-size: 41px;
+  font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: -0.035em;
   text-align: left !important;
 }
 
@@ -48,20 +54,21 @@ p { margin: 0 0 13px; }
   margin: 0 auto 16px;
   object-fit: cover;
   object-position: center;
-  border-radius: 15px !important;
+  border-radius: 18px !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
 }
 
-.profile-links { margin: 0; line-height: 1.7; text-align: center; }
-.email-line { margin-top: 16px; }
+.profile-links { margin: 0; color: var(--muted); line-height: 1.75; text-align: center; }
+.email-line { margin-top: 16px; color: var(--muted); }
 
 hr {
   height: 1px;
-  margin: 12px 20px 0;
+  margin: 24px 20px 2px;
   border: 0;
-  background-image: linear-gradient(to right, transparent, var(--rule), transparent);
+  background: var(--rule);
 }
 
-.papertitle { font-size: 17px; font-weight: 600; line-height: 1.28; }
+.papertitle { font-size: 17px; font-weight: 600; line-height: 1.3; letter-spacing: -0.012em; }
 .one, .two { width: 100%; height: auto; position: relative; }
 .two { position: absolute; transition: opacity 0.2s ease-in-out; }
 
@@ -103,10 +110,20 @@ hr {
   vertical-align: middle !important;
 }
 
+#internshipList tr:first-child .one {
+  display: flex;
+  height: 150px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
 #internshipList tr:first-child img {
-  width: 125% !important;
-  max-width: 410px;
-  margin-left: -12.5% !important;
+  flex: 0 0 auto;
+  width: 74% !important;
+  max-width: none;
+  max-height: none;
+  margin: 0 !important;
 }
 
 #internshipList tr:nth-child(3) img {
@@ -124,7 +141,7 @@ hr {
 }
 
 #educationList tr:hover, #internshipList tr:hover,
-#publicationsList tr:hover, #projectsList tr:hover { background: #fafafa; }
+#publicationsList tr:hover, #projectsList tr:hover { background: var(--surface); }
 
 #newsList { margin: 0; padding-left: 25px; }
 #newsList li {
@@ -144,14 +161,16 @@ hr {
 
 .hidden { display: none; }
 #newsList li.hidden { display: list-item; max-height: 0; margin: 0; opacity: 0; }
-.expand-link { display: inline-block; margin: 8px 0 4px; font-size: 15px; }
+.expand-link { display: inline-block; margin: 9px 0 5px; font-size: 15px; font-weight: 500; }
+
+::selection { color: var(--text); background: rgba(6, 114, 206, 0.14); }
 
 #awardsList, #leadershipList { margin: 0; padding-left: 24px; }
 #awardsList li, #leadershipList li { margin-bottom: 7px; }
 
 @media (max-width: 720px) {
   body, td, th, tr, p, a, strong { font-size: 15px; }
-  .name { margin-top: 8px; font-size: 34px; text-align: center !important; }
+  .name { margin-top: 8px; font-size: 36px; text-align: center !important; }
 
   .profile-row, .profile-row > td,
   #educationList tr, #educationList td,
@@ -171,9 +190,10 @@ hr {
 
   #educationList img, #internshipList img,
   #publicationsList img, #projectsList img { width: min(100%, 360px) !important; max-height: 230px; }
-  #internshipList tr:first-child img { width: 100% !important; margin: 0 auto !important; }
+  #internshipList tr:first-child .one { height: 145px; }
+  #internshipList tr:first-child img { width: 74% !important; margin: 0 !important; }
   #internshipList tr:nth-child(3) img { width: 72% !important; }
-  hr { margin-top: 4px; }
+  hr { margin-top: 14px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
