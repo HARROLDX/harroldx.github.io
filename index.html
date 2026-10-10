@@ -100,18 +100,75 @@
   </tbody>
 </table>
 
-<div class="education-grid" aria-label="Education">
-  <div class="education-school">
-    <img src="images/berkeley-seal.svg" alt="University of California, Berkeley seal" width="88" height="88">
-    <div class="education-school-name">University of California, Berkeley</div>
-    <p class="education-degree">Master’s</p>
-  </div>
-  <div class="education-school">
-    <img src="images/buct-seal.svg" alt="Beijing University of Chemical Technology seal" width="88" height="88">
-    <div class="education-school-name">Beijing University of Chemical Technology</div>
-    <p class="education-degree">Bachelor’s</p>
-  </div>
-</div>
+<table id="educationList" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+  <tbody>
+
+    <!-- 硕士 Berkeley -->
+    <tr onmouseout="berkeley_stop()" onmouseover="berkeley_start()">
+      <td style="padding:20px;width:30%;vertical-align:middle">
+        <div class="one">
+          <div class="two" id='berkeley' style="opacity: 0;"></div>
+          <img src='images/berkeley.png' style="width: 160%; height: auto; display: block; margin-left: 22px;">
+        </div>
+        <script type="text/javascript">
+          function berkeley_start() { document.getElementById('berkeley').style.opacity = "1"; }
+          function berkeley_stop() { document.getElementById('berkeley').style.opacity = "0"; }
+          berkeley_stop()
+        </script>
+      </td>
+      <td style="padding:35px;width:75%;vertical-align:middle">
+        <span class="papertitle">University of California, Berkeley, USA</span>
+        <br>
+        Master of Mechanical Engineering (Robotics)
+        <br>
+        2026.8 - Present
+      </td>
+    </tr>
+
+    <!-- 本科 -->
+    <tr onmouseout="buct_stop()" onmouseover="buct_start()">
+      <td style="padding:20px;width:30%;vertical-align:middle">
+        <div class="one">
+          <div class="two" id='buct' style="opacity: 0;"></div>
+          <img src='images/BUCT.png' style="width: 150%; margin-left: 25px;margin-top: 45px;">
+        </div>
+        <script type="text/javascript">
+          function buct_start() { document.getElementById('buct').style.opacity = "1"; }
+          function buct_stop() { document.getElementById('buct').style.opacity = "0"; }
+          buct_stop()
+        </script>
+      </td>
+      <td style="padding:35px;width:75%;vertical-align:middle">
+        <span class="papertitle">Beijing University of Chemical Technology, Beijing, China</span>
+        <br>
+        Bachelor of Engineering, Mechanical Design and Its Automation (Robotics)
+        <br>
+        2022.9 - 2026.6
+        <br>
+        GPA: 3.71/4.33 &nbsp;&nbsp;&nbsp;&nbsp; Rank: Top 5% &nbsp;&nbsp;&nbsp;&nbsp;Former President of <a href="https://github.com/mvyp/">SIE Robotics Club</a>.
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+
+
+
+<!-- Show more 保持最左侧，位置完全不变 -->
+<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+  <tbody>
+    <tr>
+      <td style="padding:0 20px;width:30%;vertical-align:middle; text-align:left;">
+        <a href="#" id="expandEducation" class="expand-link">Show more</a>
+      </td>
+      <td style="padding:0 35px;width:75%;vertical-align:middle">
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+
 
 <hr>
 <!--实习-->
@@ -138,7 +195,7 @@
                 <td style="padding:35px;width:80%;vertical-align:middle">
                   <span class="papertitle">Berkeley Artificial Intelligence Research (BAIR) Lab</span>
                   <br>
-                  <span class="experience-role">Research Assistant</span><span class="experience-period">Aug 2026 – Present</span>
+                  Research Assistant &nbsp;|&nbsp; Aug 2026 – Present
                   <br>
                   Faculty Advisors: Prof. <a href="https://me.berkeley.edu/people/koushil-sreenath/">Koushil Sreenath</a> and Prof. <a href="https://me.berkeley.edu/people/masayoshi-tomizuka/">Masayoshi Tomizuka</a>
                   <br>
@@ -151,13 +208,13 @@
                 <td style="padding:20px;width:30%;vertical-align:middle">
                   <div class="one">
                     <div class="two" style="opacity: 0;"></div>
-                    <img src="images/jd.png" alt="JD Explore Academy logo">
+                    <img src='images/jd.png' style="width:142%; margin-left: 30px;margin-top: -46px;">
                   </div>
                 </td>
                 <td style="padding:35px;width:100%;vertical-align:middle">
                   <span class="papertitle">JD Explore Academy, JD.com, Inc</span>
                   <br>
-                  <span class="experience-role">Embodied AI Algorithm Intern</span><span class="experience-period">Mar 2026 – Jun 2026</span>
+                  Embodied AI Algorithm Intern &nbsp;|&nbsp; Mar 2026 – Jun 2026
                   <br>
                   Mentors: Dr. <a href="https://ccf.org.cn/CCAC/speaker_d_2073">Lvsong Li</a> and Dr. <a href="https://oceanpang.github.io/">Jiangmiao Pang</a>
                   <p>Developed data, training, and deployment pipelines for dual-arm manipulation, with a focus on 3D/4D World model and reinforcement learning post-training for robotic models.</p>
@@ -169,13 +226,13 @@
                 <td style="padding:20px;width:30%;vertical-align:middle">
                   <div class="one">
                     <div class="two" style="opacity: 0;"></div>
-                    <img src="images/AIR.png" alt="Institute for AI Industry Research logo">
+                    <img src='images/AIR.png' style="width:185%; margin-left: 0px;margin-top: 10px;">
                   </div>
                 </td>
                 <td style="padding:35px;width:80%;vertical-align:middle">
                   <span class="papertitle">Institute for AI Industry Research, Tsinghua University</span>
                   <br>
-                  <span class="experience-role">Research Intern</span><span class="experience-period">Dec 2024 – Feb 2026</span>
+                  Research Intern &nbsp;|&nbsp; Dec 2024 – Feb 2026
                   <br>
                   Advisors: Dr. <a href="https://scholar.google.com.hk/citations?user=alz2MpAAAAAJ&amp;hl">Yongliang Shi</a> and Dr. <a href="https://scholar.google.com/citations?user=0JWBqJ4AAAAJ&amp;hl=zh-CN">Weining Lu</a>
                   <p>Developed Robust LiDAR-inertial-thermal SLAM and explored tactile and thermal sensing for robot imitation learning.</p>
@@ -806,6 +863,7 @@ Designed the hydraulic circuit by selecting key components including DSG-01 and 
 
             document.addEventListener('DOMContentLoaded', function () {
               setupShowMore('#newsList', 'li', 'expandNews', 4);
+              setupShowMore('#educationList', 'tr', 'expandEducation', 1);
               setupShowMore('#internshipList', 'tr', 'expandInternship', 3);
               setupShowMore('#publicationsList', 'tr', 'expandPublications', 6);
               setupShowMore('#projectsList', 'tr', 'expandProjects', 4);
