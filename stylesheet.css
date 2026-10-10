@@ -44,17 +44,17 @@ p { margin: 0 0 13px; }
 .education-school { text-align: center; min-width: 0; }
 .education-school img {
   display: block;
-  width: 220px;
-  height: 72px;
+  width: 88px;
+  height: 88px;
   max-width: 100%;
   margin: 0 auto 12px;
   object-fit: contain;
 }
-.education-school-name { font-size: 17px; font-weight: 600; line-height: 1.3; }
-.education-degree { margin: 6px 0 0; color: var(--muted); }
+.education-school-name { font-size: 16px; font-weight: 600; line-height: 1.35; }
+.education-degree { margin: 5px 0 0; color: var(--muted); font-size: 14px; }
 @media (max-width: 480px) {
   .education-grid { gap: 16px; padding: 8px 16px 16px; }
-  .education-school img { width: 160px; height: 56px; margin-bottom: 10px; }
+  .education-school img { width: 76px; height: 76px; margin-bottom: 10px; }
   .education-school-name { font-size: 14px; }
   .education-degree { font-size: 14px; }
 }
