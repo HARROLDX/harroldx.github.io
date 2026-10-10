@@ -111,6 +111,16 @@ hr {
   vertical-align: middle !important;
 }
 
+/* Slightly tighter entry spacing without narrowing the text or media columns. */
+#internshipList td:is(:first-child, :last-child),
+#publicationsList td:is(:first-child, :last-child),
+#projectsList td:is(:first-child, :last-child) {
+  padding-top: 11px !important;
+  padding-bottom: 11px !important;
+}
+#publicationsList td > p:last-child,
+#projectsList td > p:last-child { margin-bottom: 4px; }
+
 #internshipList tr:first-child img {
   width: 62% !important;
   max-width: 200px;
@@ -118,7 +128,7 @@ hr {
 
 #internshipList tr:nth-child(2) .one {
   display: flex;
-  height: 150px;
+  height: 130px;
   align-items: center;
   justify-content: center;
   overflow: hidden;
@@ -218,10 +228,16 @@ hr {
   #educationList img, #internshipList img,
   #publicationsList img, #projectsList img { width: min(100%, 360px) !important; max-height: 230px; }
   #internshipList tr:first-child img { width: 62% !important; }
-  #internshipList tr:nth-child(2) .one { height: 145px; }
+  #internshipList tr:nth-child(2) .one { height: 130px; }
   #internshipList tr:nth-child(2) img { width: 74% !important; margin: 0 !important; }
   #internshipList tr:nth-child(4) img { width: 72% !important; }
   hr { margin-top: 4px; }
+  #internshipList td:first-child,
+  #publicationsList td:first-child,
+  #projectsList td:first-child { padding-top: 10px !important; }
+  #internshipList td:last-child,
+  #publicationsList td:last-child,
+  #projectsList td:last-child { padding-bottom: 16px !important; }
 }
 
 /* Original education layout with balanced logo scale and tighter rows. */
