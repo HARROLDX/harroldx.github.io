@@ -35,8 +35,28 @@ p { margin: 0 0 13px; }
   padding-bottom: 8px !important;
 }
 
-#educationList tr:first-child td {
-  padding-top: 8px !important;
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  padding: 8px 20px 20px;
+}
+.education-school { text-align: center; min-width: 0; }
+.education-school img {
+  display: block;
+  width: 220px;
+  height: 72px;
+  max-width: 100%;
+  margin: 0 auto 12px;
+  object-fit: contain;
+}
+.education-school-name { font-size: 17px; font-weight: 600; line-height: 1.3; }
+.education-degree { margin: 6px 0 0; color: var(--muted); }
+@media (max-width: 480px) {
+  .education-grid { gap: 16px; padding: 8px 16px 16px; }
+  .education-school img { width: 160px; height: 56px; margin-bottom: 10px; }
+  .education-school-name { font-size: 14px; }
+  .education-degree { font-size: 14px; }
 }
 
 .name {

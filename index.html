@@ -100,76 +100,19 @@
   </tbody>
 </table>
 
-<table id="educationList" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-  <tbody>
+<div class="education-grid" aria-label="Education">
+  <div class="education-school">
+    <img src="images/berkeley.png" alt="University of California, Berkeley logo" width="120" height="120">
+    <div class="education-school-name">University of California,<br>Berkeley</div>
+    <p class="education-degree">Master’s</p>
+  </div>
+  <div class="education-school">
+    <img src="images/BUCT.png" alt="Beijing University of Chemical Technology logo" width="120" height="120">
+    <div class="education-school-name">Beijing University of<br>Chemical Technology</div>
+    <p class="education-degree">Bachelor’s</p>
+  </div>
+</div>
 
-    <!-- 硕士 Berkeley -->
-    <tr onmouseout="berkeley_stop()" onmouseover="berkeley_start()">
-      <td style="padding:20px;width:30%;vertical-align:middle">
-        <div class="one">
-          <div class="two" id='berkeley' style="opacity: 0;"></div>
-          <img src='images/berkeley.png' style="width: 160%; height: auto; display: block; margin-left: 22px;">
-        </div>
-        <script type="text/javascript">
-          function berkeley_start() { document.getElementById('berkeley').style.opacity = "1"; }
-          function berkeley_stop() { document.getElementById('berkeley').style.opacity = "0"; }
-          berkeley_stop()
-        </script>
-      </td>
-      <td style="padding:35px;width:75%;vertical-align:middle">
-        <span class="papertitle">University of California, Berkeley, USA</span>
-        <br>
-        Master of Mechanical Engineering (Robotics)
-        <br>
-        2026.8 - Present
-      </td>
-    </tr>
-
-    <!-- 本科 -->
-    <tr onmouseout="buct_stop()" onmouseover="buct_start()">
-      <td style="padding:20px;width:30%;vertical-align:middle">
-        <div class="one">
-          <div class="two" id='buct' style="opacity: 0;"></div>
-          <img src='images/BUCT.png' style="width: 150%; margin-left: 25px;margin-top: 45px;">
-        </div>
-        <script type="text/javascript">
-          function buct_start() { document.getElementById('buct').style.opacity = "1"; }
-          function buct_stop() { document.getElementById('buct').style.opacity = "0"; }
-          buct_stop()
-        </script>
-      </td>
-      <td style="padding:35px;width:75%;vertical-align:middle">
-        <span class="papertitle">Beijing University of Chemical Technology, Beijing, China</span>
-        <br>
-        Bachelor of Engineering, Mechanical Design and Its Automation (Robotics)
-        <br>
-        2022.9 - 2026.6
-        <br>
-        GPA: 3.71/4.33 &nbsp;&nbsp;&nbsp;&nbsp; Rank: Top 5% &nbsp;&nbsp;&nbsp;&nbsp;Former President of <a href="https://github.com/mvyp/">SIE Robotics Club</a>.
-      </td>
-    </tr>
-
-  </tbody>
-</table>
-
-
-
-<!-- Show more 保持最左侧，位置完全不变 -->
-<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-  <tbody>
-    <tr>
-      <td style="padding:0 20px;width:30%;vertical-align:middle; text-align:left;">
-        <a href="#" id="expandEducation" class="expand-link">Show more</a>
-      </td>
-      <td style="padding:0 35px;width:75%;vertical-align:middle">
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-
-
-	    
 <hr>
 <!--实习-->
 	<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
@@ -863,7 +806,6 @@ Designed the hydraulic circuit by selecting key components including DSG-01 and 
 
             document.addEventListener('DOMContentLoaded', function () {
               setupShowMore('#newsList', 'li', 'expandNews', 4);
-              setupShowMore('#educationList', 'tr', 'expandEducation', 1);
               setupShowMore('#internshipList', 'tr', 'expandInternship', 3);
               setupShowMore('#publicationsList', 'tr', 'expandPublications', 6);
               setupShowMore('#projectsList', 'tr', 'expandProjects', 4);
