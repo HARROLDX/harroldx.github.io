@@ -37,24 +37,34 @@ p { margin: 0 0 13px; }
 
 .education-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0;
   padding: 8px 20px 20px;
 }
-.education-school { text-align: center; min-width: 0; }
+.education-school {
+  display: grid;
+  grid-template-columns: 140px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 24px;
+  padding: 16px 0;
+  border-top: 1px solid #e8eaed;
+  min-width: 0;
+}
 .education-school img {
   display: block;
-  width: 88px;
-  height: 88px;
+  width: 60px;
+  height: 60px;
   max-width: 100%;
-  margin: 0 auto 12px;
+  margin: 0 auto;
   object-fit: contain;
 }
 .education-school-name { font-size: 16px; font-weight: 600; line-height: 1.35; }
-.education-degree { margin: 5px 0 0; color: var(--muted); font-size: 14px; }
+.education-degree { margin: 0; color: var(--muted); font-size: 14px; }
 @media (max-width: 480px) {
-  .education-grid { gap: 16px; padding: 8px 16px 16px; }
-  .education-school img { width: 76px; height: 76px; margin-bottom: 10px; }
+  .education-grid { padding: 8px 20px 16px; }
+  .education-school { grid-template-columns: 56px minmax(0, 1fr); gap: 2px 16px; }
+  .education-school img { width: 48px; height: 48px; grid-row: span 2; }
+  .education-degree { grid-column: 2; }
   .education-school-name { font-size: 14px; }
   .education-degree { font-size: 14px; }
 }
@@ -134,22 +144,6 @@ hr {
 #internshipList tr:first-child img {
   width: 62% !important;
   max-width: 200px;
-}
-
-#internshipList tr:nth-child(2) .one {
-  display: flex;
-  height: 150px;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
-#internshipList tr:nth-child(2) img {
-  flex: 0 0 auto;
-  width: 74% !important;
-  max-width: none;
-  max-height: none;
-  margin: 0 !important;
 }
 
 #internshipList tr:nth-child(4) img {
@@ -238,10 +232,52 @@ hr {
   #educationList img, #internshipList img,
   #publicationsList img, #projectsList img { width: min(100%, 360px) !important; max-height: 230px; }
   #internshipList tr:first-child img { width: 62% !important; }
-  #internshipList tr:nth-child(2) .one { height: 145px; }
-  #internshipList tr:nth-child(2) img { width: 74% !important; margin: 0 !important; }
   #internshipList tr:nth-child(4) img { width: 72% !important; }
   hr { margin-top: 4px; }
+}
+
+/* Compact CV rows: shared logo alignment and restrained secondary text. */
+#internshipList { padding: 0 20px 12px; }
+#internshipList > tbody { display: block; }
+#internshipList tr {
+  display: grid;
+  grid-template-columns: 140px minmax(0, 1fr);
+  gap: 24px;
+  padding: 20px 0;
+  border-top: 1px solid #e8eaed;
+}
+#internshipList td:first-child,
+#internshipList td:last-child {
+  display: block;
+  width: auto !important;
+  min-width: 0 !important;
+  padding: 0 !important;
+  text-align: left;
+}
+#internshipList td:first-child { align-self: center; }
+#internshipList td:last-child,
+#internshipList td:last-child a,
+#internshipList td:last-child p { font-size: 14px; line-height: 1.5; }
+#internshipList .papertitle { display: inline-block; margin-bottom: 4px; font-size: 17px; }
+#internshipList tr .one { display: flex; height: 80px; align-items: center; justify-content: center; }
+#internshipList tr img {
+  width: 100% !important;
+  max-width: 140px;
+  max-height: 80px;
+  margin: 0 !important;
+  border-radius: 0;
+}
+#internshipList td:last-child p { color: var(--muted); margin-top: 7px; }
+.experience-role { font-weight: 600; }
+.experience-period { float: right; color: var(--muted); font-size: 13px; margin-left: 12px; }
+@media (max-width: 600px) {
+  .education-school { grid-template-columns: 56px minmax(0, 1fr); gap: 2px 16px; }
+  .education-school img { grid-row: span 2; width: 48px; height: 48px; }
+  .education-degree { grid-column: 2; }
+  #internshipList tr { grid-template-columns: minmax(0, 1fr); gap: 10px; padding: 18px 0; }
+  #internshipList tr .one { height: 54px; justify-content: flex-start; }
+  #internshipList tr img { width: auto !important; max-width: 130px; max-height: 54px; }
+  .experience-period { float: none; display: block; margin-left: 0; }
 }
 
 @media (prefers-reduced-motion: reduce) {
