@@ -179,6 +179,16 @@ hr {
 #newsList li.hidden { display: list-item; max-height: 0; margin: 0; opacity: 0; }
 .expand-link { display: inline-block; margin: 8px 0 4px; font-size: 15px; }
 
+.visitor-map {
+  display: flex;
+  min-height: 120px;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+}
+.visitor-map img,
+.visitor-map canvas { max-width: 100%; height: auto; }
+
 #awardsList, #leadershipList { margin: 0; padding-left: 24px; }
 #awardsList li, #leadershipList li { margin-bottom: 7px; }
 
