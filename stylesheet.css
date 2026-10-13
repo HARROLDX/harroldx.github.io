@@ -263,12 +263,12 @@ hr {
   padding-bottom: 6px !important;
 }
 #educationList img[src='images/BUCT.png'] {
-  width: 78% !important;
+  width: 82% !important;
   max-width: 250px;
   max-height: 125px;
 }
 @media (max-width: 720px) {
-  #educationList img[src='images/BUCT.png'] { width: 68% !important; max-width: 225px; }
+  #educationList img[src='images/BUCT.png'] { width: 72% !important; max-width: 225px; }
   #educationList tr + tr td:first-child { padding-top: 12px !important; }
 }
 
