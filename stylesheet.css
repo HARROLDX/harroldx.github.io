@@ -88,7 +88,8 @@ hr {
 
 #publicationsList img, #projectsList img { width: 94% !important; object-fit: cover; }
 
-#publicationsList video {
+#publicationsList video,
+#projectsList video {
   display: block;
   width: 94%;
   max-width: 290px;
@@ -246,7 +247,7 @@ hr {
 
   #educationList img, #internshipList img,
   #publicationsList img, #projectsList img { width: min(100%, 360px) !important; max-height: 230px; }
-  #publicationsList video { width: 100%; max-width: 360px; }
+  #publicationsList video, #projectsList video { width: 100%; max-width: 360px; }
   #internshipList tr:first-child img { width: 62% !important; }
   #internshipList tr:nth-child(2) .one { height: 130px; }
   #internshipList tr:nth-child(2) img { width: 74% !important; margin: 0 !important; }
