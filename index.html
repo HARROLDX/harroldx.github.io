@@ -56,22 +56,22 @@
                 <h2 class="news-heading">News</h2>
                 <ul id="newsList">
 		<li>
-		    <p><span class="news-date">[2026.08]</span> 🤖 I started my master's degree at UC Berkeley and my internship at BAIR.</p>
+		    <p><span class="news-date">[2026.10]</span> 🎉 Two papers were accepted to CoRL 2026 and IROS 2026, respectively.</p>
+                  </li>
+		<li>
+		    <p><span class="news-date">[2026.08]</span> 🎓 I started my master's degree at UC Berkeley and joined BAIR as a research assistant.</p>
                   </li>
 		<li>
                     <p><span class="news-date">[2026.06]</span> 🏆 Our team won First Place in the Flexible Manipulation Track at <a href="https://wbcdcompetition.github.io/">ICRA 2026 WBCD Challenge</a>, Vienna, Austria.</p>
                   </li>
 		<li>
-                    <p><span class="news-date">[2026.03]</span> 🎉 I joined JD Explore Academy as an Embodied AI Algorithm Intern, Beijing, China.</p>
+                    <p><span class="news-date">[2026.03]</span> 🤖 I joined JD Explore Academy as an Embodied AI Algorithm Intern, Beijing, China.</p>
                   </li>
-		<li>
-                    <p><span class="news-date">[2025.07]</span> 🎉 I was honored to receive First Prize in the Embodied AI Bootcamp organized by <a href="https://www.innohk.gov.hk/en/r-d-centres/air-innohk/hong-kong-centre-for-construction-robotics-hkcrc/">HKCRC</a>, Hong Kong, China.</p>
-                </li>
 		  <li>
                     <p><span class="news-date">[2025.04]</span> 🏆 Our team won Third Prize in the <a href="https://www.dji.com/cn">DJI Technology</a> RoboMaster Competition 2025, Shandong, China.</p>
                   </li>
 		  <li>
-                    <p><span class="news-date">[2024.12]</span> 🎉 I joined the Institute for AI Industry Research, Tsinghua University as an Intern, Beijing, China.</p>
+                    <p><span class="news-date">[2024.12]</span> 🤖 I joined the Institute for AI Industry Research, Tsinghua University as an Intern, Beijing, China.</p>
             </li>
                   <li>
                     <p><span class="news-date">[2024.06]</span> 🏆 Our team won <strong><a href="https://github.com/mvyp/.github/blob/main/profile/imgs/2024robocup.jpg">Second Prize</a> in <a href="https://www.robocup.org/">RoboCup@Home</a></strong> 2024, Fujian, China.</p>
@@ -188,7 +188,7 @@
                   Faculty Advisors: Prof. <a href="https://me.berkeley.edu/people/koushil-sreenath/">Koushil Sreenath</a> and Prof. <a href="https://me.berkeley.edu/people/masayoshi-tomizuka/">Masayoshi Tomizuka</a>
                   <br>
                   Direct Mentors: Dr. <a href="https://warshallrho.github.io/">Ruihai Wu</a> and <a href="https://t6-thu.github.io/">Haoyi Niu</a>
-                  <p>My research focuses on skill learning for robotic dexterous manipulation and policy post-training with reinforcement learning.</p>
+                  <p>My research focuses on post-training robotic foundation models with reinforcement learning and dexterous manipulation.</p>
                 </td>
               </tr>
 
@@ -222,27 +222,10 @@
                   <br>
                   Research Intern &nbsp;|&nbsp; Dec 2024 – Feb 2026
                   <br>
-                  Advisors: Dr. <a href="https://scholar.google.com.hk/citations?user=alz2MpAAAAAJ&amp;hl">Yongliang Shi</a> and Dr. <a href="https://scholar.google.com/citations?user=0JWBqJ4AAAAJ&amp;hl=zh-CN">Weining Lu</a>
+                  Advisors: Dr. <a href="https://scholar.google.com.hk/citations?user=alz2MpAAAAAJ&amp;hl">Yongliang Shi</a> and Prof. <a href="https://air.tsinghua.edu.cn/en/info/1046/1196.htm">Guyue Zhou</a>
                   <p>Developed LiDAR–inertial–visual SLAM methods and explored tactile sensing and thermal imaging for robot learning.</p>
                 </td>
               </tr>
-
-              <!-- <tr>
-                <td style="padding:20px;width:30%;vertical-align:middle">
-                  <div class="one">
-
-                    <img src='images/GMU.png' style="width:165%; margin-left: 20px;margin-top: 20px;">
-                  </div>
-                </td>
-                <td style="padding:35px;width:75%;vertical-align:middle">
-                  <span class="papertitle">Multi-agent Intelligence, Control, and Optimization Lab, George Mason University </span>
-                  <br>
-                  Research Assistant &nbsp;|&nbsp; Sep 2024 – Feb 2025
-                  <br>
-                  Advisor: Dr. <a href="https://scholar.google.com/citations?user=WhA65J4AAAAJ">Yizhi Zhou</a>
-                  <p>Developed robust online UWB-anchor calibration for improved visual-inertial robot localization.</p>
-                </td>
-              </tr> -->
 
             </tbody>
           </table>
@@ -341,7 +324,7 @@
         <span class="papertitle">Spatially Grounded Agentic Planning for Long-Horizon Household Manipulation</span>
         <br>
         <b>[Paper]</b> <b>[GitHub]</b>
-        <p>Our agent uses the same spatial checks in existing skills and newly composed ones. Given a household command, it selects a skill or builds one from past action sequences and validates it in simulation. FAST-LIO2 provides lidar-inertial odometry, SC-A-LOAM corrects the pose graph, and EGO-Planner optimizes local spline trajectories. The robot queries time-stamped RGB-D observations in the corrected map to decide whether to grasp a bottle, leave it on the desk, or return there later.</p>
+        <p>Our agent selects or composes household skills from past action sequences and validates them in simulation. FAST-LIO2, SC-A-LOAM, and EGO-Planner provide corrected localization and trajectory planning, while time-stamped RGB-D observations guide task execution.</p>
       </td>
     </tr>
 
@@ -807,10 +790,10 @@ Designed the hydraulic circuit by selecting key components including DSG-01 and 
 
             document.addEventListener('DOMContentLoaded', function () {
               setupShowMore('#newsList', 'li', 'expandNews', 4);
-              setupShowMore('#educationList', 'tr', 'expandEducation', 3);
-              setupShowMore('#internshipList', 'tr', 'expandInternship', 3);
-              setupShowMore('#publicationsList', 'tr', 'expandPublications', 6);
-              setupShowMore('#projectsList', 'tr', 'expandProjects', 4);
+              setupShowMore('#educationList', 'tr', 'expandEducation', 2);
+              setupShowMore('#internshipList', 'tr', 'expandInternship', 4);
+              setupShowMore('#publicationsList', 'tr', 'expandPublications', 10);
+              setupShowMore('#projectsList', 'tr', 'expandProjects', 5);
               setupShowMore('#awardsList', 'li', 'expandAwards', 4);
               setupShowMore('#leadershipList', 'li', 'expandLeadership', 4);
             });
