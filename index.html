@@ -329,7 +329,7 @@
     <tr id="spatially-grounded-agentic-planning">
       <td>
         <div class="one">
-          <video width="1280" height="720" autoplay muted loop playsinline controls preload="metadata"
+          <video width="1280" height="720" autoplay muted loop playsinline preload="metadata"
                  poster="images/bottle-delivery-dual-view.jpg"
                  aria-label="Onboard and external views of Fetch carrying a bottle from the kitchen to the bedroom desk">
             <source src="images/bottle-delivery-dual-view.mp4" type="video/mp4">
@@ -341,7 +341,7 @@
         <span class="papertitle">Spatially Grounded Agentic Planning for Long-Horizon Household Manipulation</span>
         <br>
         <b>[Paper]</b> <b>[GitHub]</b>
-        <p>Our robot uses SLAM to align depth observations and check whether an object rests on a surface. The agent reuses this check to decide when to grasp or return to a room. It also composes new conditional skills from past executions and tests them in simulation before reuse.</p>
+        <p>Our agent uses the same spatial checks in existing skills and newly composed ones. Given a household command, it selects a skill or builds one from past action sequences and validates it in simulation. FAST-LIO2 provides lidar-inertial odometry, SC-A-LOAM corrects the pose graph, and EGO-Planner optimizes local spline trajectories. The robot queries time-stamped RGB-D observations in the corrected map to decide whether to grasp a bottle, leave it on the desk, or return there later.</p>
       </td>
     </tr>
 
