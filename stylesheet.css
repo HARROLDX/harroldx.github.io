@@ -286,3 +286,36 @@ hr {
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
 }
+
+
+.publications-heading {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+}
+
+.publication-filters {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  color: var(--muted);
+}
+
+.publication-filters button {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--link);
+  font: inherit;
+  cursor: pointer;
+}
+
+.publication-filters button[aria-pressed="true"] {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.publication-filters button:hover {
+  color: var(--link-hover);
+}

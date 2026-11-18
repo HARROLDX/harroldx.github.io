@@ -249,7 +249,14 @@
             <tbody>
                 <tr>
                 <td style="padding:20px;width:100%;vertical-align:middle">
-                  <h2>Publications</h2>
+                  <div class="publications-heading">
+                    <h2>Publications</h2>
+                    <div class="publication-filters" role="group" aria-label="Publication selection">
+                      <button type="button" data-publication-filter="selected" aria-pressed="true" aria-controls="publicationsList">Selected</button>
+                      <span aria-hidden="true">/</span>
+                      <button type="button" data-publication-filter="all" aria-pressed="false" aria-controls="publicationsList">All</button>
+                    </div>
+                  </div>
                   <p>
                     * : Equal contribution; †: Corresponding author(s)
                   </p>
@@ -263,7 +270,7 @@
             <tbody>
 
 <!--论文-->
-    <tr>
+    <tr data-selected="true">
       <td style="padding:20px;width:30%;vertical-align:middle">
         <div class="one">
           <img src="images/ego_rl.gif" width="180%" alt="Human-video priors refined into bimanual robot demonstrations">
@@ -282,7 +289,7 @@
       </td>
     </tr>
 
-    <tr>
+    <tr data-selected="true">
       <td style="padding:20px;width:30%;vertical-align:middle">
         <div class="one">
 
@@ -333,7 +340,7 @@
 
 
 
-<tr>
+<tr data-selected="true">
   <td style="padding:20px;width:30%;vertical-align:middle">
     <div class="one">
 
@@ -376,7 +383,7 @@
 
 
 
-    <tr>
+    <tr data-selected="true">
       <td style="padding:20px;width:30%;vertical-align:middle">
         <div class="one">
 
@@ -472,16 +479,7 @@
 
 	</tbody>
 </table>
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-              <tr>
-                <td style="padding:0 20px;width:30%;vertical-align:middle">
-                  <a href="#" id="expandPublications" class="expand-link">Show more</a>
-                </td>
-                <td style="padding:0 35px;width:75%;vertical-align:middle"></td>
-              </tr>
-            </tbody>
-          </table>
+
 
 
       <hr>
@@ -816,7 +814,21 @@ Designed the hydraulic circuit by selecting key components including DSG-01 and 
               setupShowMore('#newsList', 'li', 'expandNews', 4);
               setupShowMore('#educationList', 'tr', 'expandEducation', 2);
               setupShowMore('#internshipList', 'tr', 'expandInternship', 4);
-              setupShowMore('#publicationsList', 'tr', 'expandPublications', 10);
+              const publications = Array.from(document.querySelectorAll('#publicationsList > tbody > tr'));
+              const selectedPublications = publications.filter(row => row.dataset.selected === 'true').slice(0, 8);
+              const filters = document.querySelectorAll('[data-publication-filter]');
+              function filterPublications(filter) {
+                publications.forEach(row => {
+                  row.classList.toggle('hidden', filter === 'selected' && !selectedPublications.includes(row));
+                });
+                filters.forEach(button => {
+                  button.setAttribute('aria-pressed', String(button.dataset.publicationFilter === filter));
+                });
+              }
+              filters.forEach(button => {
+                button.addEventListener('click', () => filterPublications(button.dataset.publicationFilter));
+              });
+              filterPublications('selected');
               setupShowMore('#projectsList', 'tr', 'expandProjects', 5);
               setupShowMore('#awardsList', 'li', 'expandAwards', 4);
               setupShowMore('#leadershipList', 'li', 'expandLeadership', 4);
